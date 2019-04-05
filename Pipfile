@@ -1,0 +1,27 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+sqlalchemy = "*"
+gunicorn = "*"
+itsdangerous = "*"
+pytest = "*"
+Flask-WTF = "*"
+Flask-Bcrypt = "*"
+Flask-Login = "*"
+Flask = "*"
+Flask-Testing = "*"
+Jinja2 = "*"
+MarkupSafe = "*"
+Flask-SQLAlchemy = "*"
+Werkzeug = "*"
+pytest-cov = "*"
+coverage = "*"
+pytest-html = "*"
+
+[requires]
+python_version = "3.7"

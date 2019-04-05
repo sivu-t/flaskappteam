@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+
+
+  <div id="results">
+    <table class="table table-dark table-striped">
+      <tr>
+        <th>Name</th>
+        <th>Physics</th>
+        <th>Maths</th>
+        <th>Chemistry</th>
+      </tr>
+      <h2>Student Results</h2>
+      {% for x in data %}
+      <div>
+        <tr>
+          <td><a href='/edit_results/{{x.id}}' style="color: #FFFFFF;">{{x.name}}</a></td>
+          <td>{{ x.physics }}</td>
+          <td>{{ x.maths }}</td>
+          <td>{{ x.chemistry }}</td>
+      </div>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  {% endblock content %}
