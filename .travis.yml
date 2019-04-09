@@ -1,15 +1,16 @@
 language: python
-
 python:
-
-  - 3.5
-
+- 3.5
 env:
-  - pipenv
-
+- pipenv
 install:
-  - pipenv install
-
+- pipenv install
 script:
-
- - py.test --cov=tests
+- py.test --cov=tests
+deploy:
+  provider: heroku
+  api_key:
+    secure: hvzpl0/ORay49pfD/NxOcoRTStcnAn7kUuQ2RfVRdi9D1p9CQ1Gzc8aotZMrHoLrWkWOIaO8FMn3J82yxpdIIhmsdkD06VIpC5p0t7/FNu5ZJ+aolBYSI+vOSnwac4tk0TZbAq3jui/TyBVx8TZay59h0aNpxSFKR3NBK7ZqlRTyNlH7YRDe5gdcM7ZwvBsDcaxSnFz4r+o5aKAbBNjftvHtJygVbnfiMY9nizMiqWaysqWhh95ylRzhbw9CSmNh7nWkaLrj9Hxc4HXMwTc8MTeyYQOJSi+60FQzF8BQp5ewcJ7JB12TttUXdnj3p773yq0H/lqjoPiQ+wX8y8e4a7jFLN5hwiBePEHxswc+VXuFrEqWYo4YaM5ym2j/iBtDztfwTQEKJnz5N849lJR/fuc82rZfk5Zw+QIOv21g/w4oEIrrwQGL8zJ3lIDDo+bhKpNHZxiWDfKL4P/gY0bozLSDHI7LgJ925QM70UIrNupngKC/oynL05K+NOa82rfWi2isVtJHkWzJceBfboKTf8ayVZ1rY+Re5UAJzuyvYIkm7n8q2AhK4NF1BYOxug2XUY3bB4yAwuyMXmnoqjTDA51yIhprOWnMdCKwuR7SvXmi0z70jT/foV7X0/3SsfHVpwrjtd6WSGiyNSJpQq3R6KPfOwlHPij5Hpt7v+fla0Q=
+  app: flaskappteam
+  on:
+    repo: sivu-t/flaskappteam
