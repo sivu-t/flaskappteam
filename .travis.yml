@@ -18,4 +18,4 @@ deploy:
   app: flaskappteam
   on:
     repo: sivu-t/flaskappteam
-    branch: sivubranch
+    branch: master
