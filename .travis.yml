@@ -7,15 +7,15 @@ install:
 - pipenv install
 script:
 - py.test --cov=tests
+branches:
+  only:
+  - sivubranch
+  - master
 deploy:
   provider: heroku
   api_key:
-    secure: hvzpl0/ORay49pfD/NxOcoRTStcnAn7kUuQ2RfVRdi9D1p9CQ1Gzc8aotZMrHoLrWkWOIaO8FMn3J82yxpdIIhmsdkD06VIpC5p0t7/FNu5ZJ+aolBYSI+vOSnwac4tk0TZbAq3jui/TyBVx8TZay59h0aNpxSFKR3NBK7ZqlRTyNlH7YRDe5gdcM7ZwvBsDcaxSnFz4r+o5aKAbBNjftvHtJygVbnfiMY9nizMiqWaysqWhh95ylRzhbw9CSmNh7nWkaLrj9Hxc4HXMwTc8MTeyYQOJSi+60FQzF8BQp5ewcJ7JB12TttUXdnj3p773yq0H/lqjoPiQ+wX8y8e4a7jFLN5hwiBePEHxswc+VXuFrEqWYo4YaM5ym2j/iBtDztfwTQEKJnz5N849lJR/fuc82rZfk5Zw+QIOv21g/w4oEIrrwQGL8zJ3lIDDo+bhKpNHZxiWDfKL4P/gY0bozLSDHI7LgJ925QM70UIrNupngKC/oynL05K+NOa82rfWi2isVtJHkWzJceBfboKTf8ayVZ1rY+Re5UAJzuyvYIkm7n8q2AhK4NF1BYOxug2XUY3bB4yAwuyMXmnoqjTDA51yIhprOWnMdCKwuR7SvXmi0z70jT/foV7X0/3SsfHVpwrjtd6WSGiyNSJpQq3R6KPfOwlHPij5Hpt7v+fla0Q=
+    secure: liWxemXHNxdJ1/ofBIcjfxBxR39o31w6B7jD9E2+l2EuOhHJQQYAQBZ9DgaJrOjhOL5hvNFsucJ4kkqAmRBqfa3/E2YjAcZgm2pHae8E2O/o9TGl4XID6BN8QF2hDPyYXcPHJ8HQTijaCeUNE9h8XsL3y2Y5Y9x2nUO2p0l/C96qpcTdoummY2/H1pVFsy4aZ8yXNt0Whl4oNd0+X80m+db/+2hT2LMXY/+BoXlGgNawWALOCDyhfNyPhabx5+0xFyTTN0rsOiLt4Y1G7REz41lrw98O+ykx2Mn8ZtNyPXtE8B1y6k8Hrty88lA0yDOaDJq0crWy6SOZc01X3WEC3QFyza7L8Q4X0jumDxnWTguEn5RP4C1U3nO34/2ExmIviKjpl1ONq+j0F21+35YYxXddVz7l5Th9l7ENVTZRjrarxS5wtjaWXhXtZ+y91aJ5XwUenQd6D8ZgaPdmg7DqiOMi2l3VX3zonVzDP+ocnGrvHHTGWGtnZxGFnKI8xDN6uaRzUXctjCwjHFqupcdKKhpySLwAEwAVFVykYCrVkaMofMHSR1FBvAisEw00P/QxIy+kk5EpAA9P/bZCFxq8Cp+FLePqAaLKpUuo6A3xL/CGPv5WvIK4bfUiSD7Mqwcq8EGfcLhIfttSXputMj6kN7oFlJnK3Ohsz8mMXFbBmNA=
   app: flaskappteam
   on:
     repo: sivu-t/flaskappteam
-
-    script: make push TAG=$TRAVIS_TAG
-  on:
-      tags: true
-      all_branches: true
+    branch: sivubranch
